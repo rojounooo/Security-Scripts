@@ -7,7 +7,7 @@
 # - At least one digit (0–9)
 # - At least one special character (@, #, $, %, ^, &, +, =, ., _, -)
 
-# Import modules
+# Import libraries
 import re
 
 # Display password policy
