@@ -19,7 +19,7 @@ def send_request(hashed_password):
     response = requests.get(url)
     return response
 
-# Function to check if the password has been compromised 
+# Check if the password is compromised
 prefix, suffix = hash_password(password)
 response = send_request(prefix)
 if response.status_code == 200:
