@@ -17,7 +17,7 @@ This repository contains a curated set of beginner to advanced security scripts 
 
 | Level       | Script Name                | Description                       | Language | Status |
 |-------------|----------------------------|-----------------------------------|----------|--------|
-| Beginner    |                            |                                   |          |        |
+| Beginner    | [password_checker.py](beginner/password_strength_checker/)| A simple script that takes a password and compares to a password policy checklist|Python|Complete|
 | Intermediate|                            |                                   |          |        |
 | Advanced    |                            |                                   |          |        |
 
