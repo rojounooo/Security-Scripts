@@ -51,6 +51,6 @@ except Exception as e:
 # Check if both files exist
 check_files_exist(file, hash_file)
 
-# Append the hash value to the hash file
+# Append the hash to the hash file
 if check_files_exist(file, hash_file):
     append_hash(sha256_hash, file, hash_file)
