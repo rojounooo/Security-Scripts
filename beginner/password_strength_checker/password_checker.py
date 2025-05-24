@@ -24,30 +24,24 @@ password = input("Enter a password to check its strength: ")
 
 # Length check
 if len(password) < 10:
-    len_check = "Password is too short. It should be at least 10 characters long."
     len_pass = False
 else:
-    len_check = "Password length is sufficient."
     len_pass = True
 
 # Uppercase check 
 if not re.search("[A-Z]", password):
-    case_check = "Password should contain at least one uppercase letter."
     case_pass = False
 else:
-    case_check = "Password contains uppercase letters."
     case_pass = True
 
 # Lowercase check
 if not re.search("[a-z]", password):
-    lower_check = "Password should contain at least one lowercase letter."
     lower_pass = False
 else:
-    lower_check = "Password contains lowercase letters."
     lower_pass = True
 
 # Digit check
-if not re.search("[0-9]", password):
+if not re.search("\d", password):
     digit_check = "Password should contain at least one digit."
     digit_pass = False
 else:
@@ -64,7 +58,7 @@ else:
 
 # Final output
 print("\nPassword Strength Check Results:")
-print(f"Length (≥10 chars):       {'✅' if len_pass else '❌'}")
+print(f"Length (≥10 chars):        {'✅' if len_pass else '❌'}")
 print(f"Uppercase letters:         {'✅' if case_pass else '❌'}")
 print(f"Lowercase letters:         {'✅' if lower_pass else '❌'}")
 print(f"Digits:                    {'✅' if digit_pass else '❌'}")

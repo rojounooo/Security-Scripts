@@ -29,3 +29,5 @@ if response.status_code == 200:
         if returned_suffix == suffix:
             print(f"Your password has been compromised {count} times.")
             break
+    else:
+        print("Your password has not been compromised.")
