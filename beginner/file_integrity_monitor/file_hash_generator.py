@@ -21,7 +21,7 @@ def check_files_exist(file_path, hash_file_path):
         return False
     return True
 
-# Function to check add hash values to the hash file
+# Function to check hash values to the hash file
 def append_hash(hash,file_path, hash_file_path):
     try:
         with open(hash_file_path, "a") as hash_file:
