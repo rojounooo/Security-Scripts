@@ -9,7 +9,6 @@ This repository contains a curated set of beginner to advanced security scripts 
 - `beginner/` - Foundational scripts for learning basic security concepts.
 - `intermediate/` - Scripts that involve automation, scanning, and log analysis.
 - `advanced/` - Projects that simulate real-world scenarios like intrusion detection or C2 frameworks.
-- `shared_assets/` - Wordlists and shared data used by multiple scripts.
 
 ---
 
@@ -17,10 +16,11 @@ This repository contains a curated set of beginner to advanced security scripts 
 
 | Level       | Script Name                | Description                       | Language | Status |
 |-------------|----------------------------|-----------------------------------|----------|--------|
-| Beginner    | [password_checker.py](beginner/password_strength_checker/)| A simple script that takes a password and compares to a password policy checklist|Python|Complete|
-| Beginner    | [breach_checker.py](beginner/password_breach_checker/)| A simple script that takes a password, hashes it and then makes a request to HaveIBeenPwned |Python|Complete|
-| Intermediate|                            |                                   |          |        |
-| Advanced    |                            |                                   |          |        |
+| Beginner    | [password_checker.py](beginner/Python Scripts/password_strength_checker/)| Takes a password and compares to a password policy checklist|Python|Complete|
+| Beginner    | [breach_checker.py](beginner/Python Scripts/password_breach_checker/)| Takes a password, hashes it and then makes a request to HaveIBeenPwned |Python|Complete|
+| Beginner    | [simple_nmap_scanner.py](beginner/Python Scripts/simple_port_scanner/)| Takes an host IP or URL and attempts to enumerate every port |Python|Complete|
+| Beginner    | [file_integrity_monitor.py](beginner\Python Scripts\simple_port_scanner/)| Monitors files or directories for unauthorized changes |Python|Complete|
+| Beginner    | [permission_checker.sh](beginner/Bash Scripts/directory_permission_checker/)| Checks if directories under /home are globally accessible |Bash|Complete|
 
 ---
 
@@ -29,7 +29,7 @@ This repository contains a curated set of beginner to advanced security scripts 
 Each script is documented inside its respective folder. To run a script e.g. password_checker.py:
 
 ```bash
-cd beginner/password_strength_checker
+cd beginner/Python Scripts/password_strength_checker
 python3 password_checker.py
 ```
 # ⚠️ DISCLAIMER
