@@ -1,0 +1,20 @@
+#!/bin/bash
+
+FILE="permission_checker.log"
+> "$FILE"  # Clear previous log contents
+
+for ITEM in /home/*
+do 
+    if [ -d "$ITEM" ]; then
+        echo "Checking permissions for directory: $ITEM"
+        PERMS=$(stat -c "%a" "$ITEM")
+        
+        if [ "$PERMS" -eq 755 ]; then
+            echo "Permissions for $ITEM are set to 755" >> "$FILE"
+        elif [ "$PERMS" -gt 755 ]; then
+            echo "WARNING: $ITEM has overly permissive permissions: $PERMS" >> "$FILE"
+        fi
+    fi
+done
+
+echo "Results stored in $FILE"
