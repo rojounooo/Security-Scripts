@@ -18,7 +18,7 @@ def send_ssh_alert(ssh_message, ssh_webhook_url):
         print(f"Error sending alert: {e}")
 
 
-def handle_packet(packet):
+def handle_new_connection(packet):
     if packet.haslayer(IP) and packet.haslayer(TCP): # Check if the packet has IP and TCP layers
         # Extract relevant fields from the packet
         ip_src = packet[IP].src
@@ -28,10 +28,10 @@ def handle_packet(packet):
 
         # Detect only new SSH connection attempts (SYN packets)
         if (dport == 22 or sport == 22) and packet[TCP].flags == 'S':
-            alert = f"🚨 SSH Connection Attempt Detected!\n🔹 Source: {ip_src}:{sport}\n🔹 Destination: {ip_dst}:{dport}"
+            alert = f"🚨 SSH Connection Detected!\n🔹 Source: {ip_src}:{sport}\n🔹 Destination: {ip_dst}:{dport}"
             print(alert)
             send_ssh_alert(alert, ssh_webhook_url)
 
 # Start sniffing for TCP traffic
-sniff(filter="tcp", prn=handle_packet, store=0) # Call handle_packet for each packet
+sniff(filter="tcp", prn=handle_new_connection, store=0) # Call handle_new_connection for each packet
 # Note: This script requires root privileges to sniff packets on most systems.
