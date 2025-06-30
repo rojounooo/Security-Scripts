@@ -1,3 +1,18 @@
+"""
+Filename: maxmind_setup.py
+Author: rojounooo
+Created: 2025-06-30
+Last Updated: 2025-06-30
+
+Description:
+This script downloads and extracts the MaxMind GeoLite2 City database.
+It is designed to be cross-platform and works on both Windows and Linux.
+It requires a valid MaxMind license key to download the database which can be obtained from MaxMind's website after creating an account.
+It will also need a valid edition ID, which is typically "GeoLite2-City" for the city database.
+Make sure to replace `your_license_key_here` with your actual MaxMind license key.
+"""
+
+
 import requests
 import tarfile
 import os
