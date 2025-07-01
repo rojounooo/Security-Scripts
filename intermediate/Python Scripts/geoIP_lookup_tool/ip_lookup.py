@@ -11,7 +11,7 @@ if len(argv) != 2:
 ip_address = argv[1]
 
 # === Load GeoIP Database ===
-# Ensure the GeoIP database file is in the same directory as this script or provide the full
+# Ensure the GeoIP database file is in the same directory as this script or provide the full path.
 def load_geoip_database(db_path):
     try:
         return geoip2.database.Reader(db_path)
