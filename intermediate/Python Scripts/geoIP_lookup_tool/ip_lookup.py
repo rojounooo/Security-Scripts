@@ -1,3 +1,13 @@
+"""
+Filename: ip_lookup.py
+Author: rojounooo
+Created: 30-06-2025
+Last Updated: 02-07-2025
+
+Description:
+This script performs GeoIP lookups for a single IP address or a list of IP addresses using a local MaxMind GeoLite2 database.
+"""
+
 # === Import Libraries ===
 import os  # For file path operations (optional here)
 import sys  # For system-specific functions like exit()
